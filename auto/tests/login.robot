@@ -34,7 +34,7 @@ Cenário 3: Fazer login com senha inválida
     Então deve apresentar o alerta de erro "Epic sadface: Username and password do not match any user in this service"
 
 
-Cenário 4: Fazer login com senha inválida
+Cenário 4: Fazer login com usuário bloqueado
     [Documentation]    Validar tela de login informando senha inválida
     [Tags]    login_invalido    senha_invalida
     Dado que estou na tela de login
