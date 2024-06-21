@@ -13,6 +13,8 @@ Quando preencho o campo username
         Input Text    ${login.campo_username}    ${USERNAME}
     END
 
+Quando preencho o campo username com "${locked_user}"
+    Input Text    ${login.campo_username}    ${locked_user}
 E preencho o campo password
     [Arguments]   ${status}
     IF  '${status}' == 'inválido'

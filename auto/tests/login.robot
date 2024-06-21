@@ -33,3 +33,11 @@ Cenário 3: Fazer login com senha inválida
     E preencho o campo password    inválido
     Então deve apresentar o alerta de erro "Epic sadface: Username and password do not match any user in this service"
 
+
+Cenário 4: Fazer login com senha inválida
+    [Documentation]    Validar tela de login informando senha inválida
+    [Tags]    login_invalido    senha_invalida
+    Dado que estou na tela de login
+    Quando preencho o campo username com "locked_out_user"
+    E preencho o campo password    válido
+    Então deve apresentar o alerta de erro "Epic sadface: Sorry, this user has been locked out."
