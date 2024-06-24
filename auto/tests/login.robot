@@ -12,14 +12,14 @@ ${inválido}    inválido
 
 Cenário 1: Fazer login com sucesso
     [Documentation]    Validar tela de login com sucesso
-    [Tags]    login_sucesso
+    [Tags]    valid_login
     Dado que estou na tela de login
     Quando preencho os campos username e password corretamente
     Então serei direcionado para a tela de dashboard
 
 Cenário 2: Fazer login com usuários inválido
     [Documentation]    Validar tela de login informando usuário inválido
-    [Tags]    login_invalido    user_invalido
+    [Tags]    invalid_login    invalid_user
     Dado que estou na tela de login
     Quando preencho o campo username    inválido
     E preencho o campo password    válido
@@ -27,7 +27,7 @@ Cenário 2: Fazer login com usuários inválido
 
 Cenário 3: Fazer login com senha inválida
     [Documentation]    Validar tela de login informando senha inválida
-    [Tags]    login_invalido    senha_invalida
+    [Tags]    invalid_login    invalid_password
     Dado que estou na tela de login
     Quando preencho o campo username   válido
     E preencho o campo password    inválido
@@ -35,9 +35,9 @@ Cenário 3: Fazer login com senha inválida
 
 
 Cenário 4: Fazer login com usuário bloqueado
-    [Documentation]    Validar tela de login informando senha inválida
-    [Tags]    login_invalido    senha_invalida
+    [Documentation]    Validar tela de login informando usuário bloqueado
+    [Tags]    invalid_login   locked_user
     Dado que estou na tela de login
-    Quando preencho o campo username com "locked_out_user"
+    Quando preencho o campo username   locked
     E preencho o campo password    válido
     Então deve apresentar o alerta de erro "Epic sadface: Sorry, this user has been locked out."

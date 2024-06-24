@@ -6,15 +6,17 @@ Dado que estou na tela de login
     Wait Until Element Is Visible    ${login.botao_login}    10s
 
 Quando preencho o campo username
-    [Arguments]   ${status}
-    IF  '${status}' == 'inválido'
+    [Arguments]   ${type}
+    IF  '${type}' == 'inválido'
         Input Text    ${login.campo_username}    admin
+    ELSE IF  '${type}' == 'locked'
+        Input Text    ${login.campo_username}    ${USERNAME.locked}
+    ELSE IF  '${type}' == 'problem'
+        Input Text    ${login.campo_username}    ${USERNAME.problem}
     ELSE
-        Input Text    ${login.campo_username}    ${USERNAME}
+        Input Text    ${login.campo_username}    ${USERNAME.default}
     END
 
-Quando preencho o campo username com "${locked_user}"
-    Input Text    ${login.campo_username}    ${locked_user}
 E preencho o campo password
     [Arguments]   ${status}
     IF  '${status}' == 'inválido'
