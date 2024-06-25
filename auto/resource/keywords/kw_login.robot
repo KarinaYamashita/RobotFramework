@@ -36,8 +36,8 @@ Quando preencho os campos username e password corretamente
     E preencho o campo password         válido
     Click Button    ${login.botao_login}
 
-Então serei direcionado para a tela de dashboard
-    ${status}    Run Keyword And Return Status   Wait Until Element Is Visible    ${home.inventory_filter}    10s
+Então serei direcionado para a tela da home
+    ${status}    Run Keyword And Return Status   Wait Until Element Is Visible    ${Products.label}    10s
     IF  ${status}
         Log    Usuário logado com sucesso
     ELSE

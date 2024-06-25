@@ -15,8 +15,7 @@ Cenário 1: Fazer login com sucesso
     [Tags]    valid_login
     Dado que estou na tela de login
     Quando preencho os campos username e password corretamente
-    Então serei direcionado para a tela de dashboard
-
+    Então serei direcionado para a tela da home
 Cenário 2: Fazer login com usuários inválido
     [Documentation]    Validar tela de login informando usuário inválido
     [Tags]    invalid_login    invalid_user

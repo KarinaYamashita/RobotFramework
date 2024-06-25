@@ -30,11 +30,4 @@ Fazer Login
     Quando preencho o campo username    ${user_type}
     E preencho o campo password         válido
     Click Button    ${login.botao_login}
-
-#  Acessar menu
-#      [Arguments]    ${menu}    ${element}
-#      Fazer Login
-#      Wait Until Element Is Visible    ${menu}    10s
-#      Click Element    ${menu}
-#      Wait Until Element Is Visible   ${element}    30s
     
