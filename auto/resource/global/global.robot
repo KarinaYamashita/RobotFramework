@@ -9,6 +9,7 @@ ${URL}  https://www.saucedemo.com/v1/
 ...  locked=locked_out_user
 ...  problem=problem_user
 ${PASSWORD}    secret_sauce
+${COUNTER}    0
 
 *** Keywords ***
 Abrir Navegador

@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation    Validar tela de login
 Resource          ../../main.robot
-Suite Setup       Initial Config default
-Suite Teardown    Fechar Navegador
+Test Setup       Initial Config problem
+Test Teardown    Fechar Navegador
 
 *** Variables ***
 ${inválido}    inválido
@@ -22,7 +22,7 @@ Cenário 2: Validação da visualização do item
     [Documentation]    Validar a visualização do detalhamento do item ao ser redirecionado a página do produto
     [Tags]    adicao_item
     Dado que estou na home da aplicação
-    Quando clico em um item    ${Products.product_3}
+    Quando clico em um item    ${product_locator}[2]
     Então sou redirecionado para página do produto
     E visualizo a descrição do produto
 
@@ -31,5 +31,5 @@ Cenário 3: Validação da adição de itens no carrinho
     [Tags]    adicao_item
     Dado que foram adicionados itens no carrinho
     Quando clico no ícone carrinho
-    Então deve ser exibida a lista com os itens adicionados
-    E o contador de itens deve refletir o número de itens exibidos
+    Então deve ser exibida a lista com os itens adicionados    ${product_name}
+    E o contador de itens deve refletir o número de itens exibidos 3

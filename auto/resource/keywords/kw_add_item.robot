@@ -14,7 +14,6 @@ E o contador do carrinho deverá ser ${item_number}
     Should Be Equal    '${counter}'    '${item_number}'
 E o botão “${btn_remove}” deverá ser exibido no produto
     Wait Until Element Is Visible    ${Products.btn_remove}    10s
-    Debug
     ${btn_name}    Get Text    ${Products.btn_remove}
     Should Be Equal    '${btn_name}'    '${btn_remove}'
 
@@ -39,8 +38,15 @@ Dado que foram adicionados itens no carrinho
     Quando clico em “ADD TO CARD” de um produto    ${Products.product_btn_3}
 Quando clico no ícone carrinho
     Click Element   ${Cart.your_cart}
-Então deve ser exibida a lista com os itens adicionados
-    Debug
+Então deve ser exibida a lista com os itens adicionados 
+    [Arguments]    ${product_name}
+    FOR    ${element}    IN    ${product_name}
+        Exit For Loop If    ${COUNTER}==3
+        Log    ${element}
+        Log    ${COUNTER} 
+        Page Should Contain    ${product_name}[${COUNTER}] 
+        ${COUNTER}    Evaluate    ${COUNTER}+1
+    END       
 
-E o contador de itens deve refletir o número de itens exibidos
-    Debug
+E o contador de itens deve refletir o número de itens exibidos ${item_number}
+    E o contador do carrinho deverá ser ${item_number}
