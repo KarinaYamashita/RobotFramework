@@ -3,9 +3,6 @@
 Library           SeleniumLibrary
 Library           OperatingSystem
 Library           Collections
-Library           String
-Library           DateTime
-Library           FakerLibrary
 Library           DebugLibrary
 
 ###    Global    ###
