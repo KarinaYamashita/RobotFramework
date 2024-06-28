@@ -4,10 +4,6 @@ Resource          ../../main.robot
 Test Setup       Abrir Navegador
 Test Teardown    Fechar Navegador
 
-*** Variables ***
-${inválido}    inválido
-
-
 *** Test Cases ***
 
 Cenário 1: Fazer login com sucesso

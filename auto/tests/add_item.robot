@@ -1,11 +1,9 @@
 *** Settings ***
-Documentation    Validar tela de login
+Documentation    Validar da adição de itens ao carrinho
 Resource          ../../main.robot
-Test Setup       Initial Config problem
+Test Setup       Initial Config default
 Test Teardown    Fechar Navegador
 
-*** Variables ***
-${inválido}    inválido
 
 
 *** Test Cases ***
@@ -31,5 +29,5 @@ Cenário 3: Validação da adição de itens no carrinho
     [Tags]    adicao_item
     Dado que foram adicionados itens no carrinho
     Quando clico no ícone carrinho
-    Então deve ser exibida a lista com os itens adicionados    ${product_name}
+    Então deve ser exibida a lista com os itens adicionados    ${product_name}    3
     E o contador de itens deve refletir o número de itens exibidos 3

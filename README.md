@@ -8,6 +8,8 @@ Repositório destinado a prática da utilização da ferramenta RobotFramework. 
 
 - Collections
 
+- OperatingSystem
+
 ##  Pré-requisitos
 A aplicação foi testada com as versões das ferramentas, que são listadas abaixo:
 

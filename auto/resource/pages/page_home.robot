@@ -6,6 +6,7 @@
 ...    product_btn_2=(//button[contains(.,'ADD TO CART')])[2]
 ...    product_btn_3=(//button[contains(.,'ADD TO CART')])[3]
 ...    btn_remove=//*[@id="inventory_container"]/div/div[1]/div[3]/button
+...    image_1=//*[@id="item_4_img_link"]/img
 
 &{Menu}
 ...    menu=//*[@id="menu_button_container"]/div/div[3]/div/button
